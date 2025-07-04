@@ -18,7 +18,7 @@ exports.createShortURL = async (req, res) => {
   await short.save();
 
   res.status(201).json({
-    shortLink: `example.com/${code}`,
+    shortLink: `${BASE_URL}/${code}`,
     expiry: expiry.toISOString(),
   });
 };
